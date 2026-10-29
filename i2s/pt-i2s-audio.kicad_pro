@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -203,7 +209,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.4
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +240,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -488,7 +503,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "atom-audio.kicad_pro",
+    "filename": "pt-i2s-audio.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -513,7 +528,7 @@
         "wire_width": 6
       },
       {
-        "name": "+3V3",
+        "name": "VDD",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -528,8 +543,12 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "+3V3",
+        "netclass": "VDD",
         "pattern": "+3V3"
+      },
+      {
+        "netclass": "VDD",
+        "pattern": "VDD"
       }
     ]
   },
@@ -669,8 +688,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "atom-audio.kicad_sch",
-        "name": "atom-audio",
+        "filename": "pt-i2s-audio.kicad_sch",
+        "name": "pt-i2s-audio",
         "uuid": "d81566a3-7efd-4872-99ce-e846bc969601"
       }
     ],
@@ -680,7 +699,7 @@
   "sheets": [
     [
       "d81566a3-7efd-4872-99ce-e846bc969601",
-      "atom-audio"
+      "pt-i2s-audio"
     ]
   ],
   "text_variables": {},

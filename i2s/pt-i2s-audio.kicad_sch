@@ -676,349 +676,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "H"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Mounting Hole without connection"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MountingHole_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "MyLibrary:M5Atom_Lite"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "M5Atom_Lite_1_1"
-				(rectangle
-					(start -7.62 7.62)
-					(end 7.62 -7.62)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(text "M5Atom Lite"
-					(at 2.032 8.636 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 3.81 0)
-					(length 2.54)
-					(name "3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 1.27 0)
-					(length 2.54)
-					(name "G22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -1.27 0)
-					(length 2.54)
-					(name "G19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -3.81 0)
-					(length 2.54)
-					(name "G23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -6.35 0)
-					(length 2.54)
-					(name "G33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 1.27 180)
-					(length 2.54)
-					(name "G21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -1.27 180)
-					(length 2.54)
-					(name "G25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -3.81 180)
-					(length 2.54)
-					(name "5V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -6.35 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "MyLibrary:PRINCETON_PT8211"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1035,7 +692,7 @@
 					)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "PT8211"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1045,7 +702,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+			(property "Footprint" "Package_SO:SOP-8_3.76x4.96mm_P1.27mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1056,7 +713,7 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://akizukidenshi.com/goodsaffix/pt8211.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1245,7 +902,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MyLibrary:TI_LM4881MX"
+		(symbol "MyLibrary:PT8211-I2S-Audio_Module"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1271,7 +928,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm"
+			(property "Footprint" "MyLibrary:PT8211-I2C-Audio_Module"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1283,6 +940,268 @@
 				)
 			)
 			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PT8211-I2S-Audio_Module_1_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -10.16)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "PT8211 LM488x Module"
+					(at 15.494 11.938 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -1.27 12.7 270)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 3.81 0)
+					(length 2.54)
+					(name "BCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 1.27 0)
+					(length 2.54)
+					(name "WS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -1.27 0)
+					(length 2.54)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -3.81 0)
+					(length 2.54)
+					(name "SHUTDOWN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 12.7 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MyLibrary:TI_LM4881MX"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM4881MX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/product/ja-jp/LM4881/part-details/LM4881MX/NOPB"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1725,6 +1644,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:VDD"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VDD"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VDD\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VDD_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VDD_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
 		(start 29.845 24.765)
@@ -1740,7 +1798,7 @@
 	)
 	(rectangle
 		(start 90.805 55.245)
-		(end 198.755 116.205)
+		(end 208.28 116.205)
 		(stroke
 			(width 0)
 			(type default)
@@ -1775,22 +1833,40 @@
 		(uuid "617f0ec9-239f-41cc-acbd-cc84a36b9faa")
 	)
 	(junction
+		(at 161.29 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7110f6da-a996-4a69-a9f6-2f524c2933b8")
+	)
+	(junction
 		(at 146.05 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73cb30be-8193-4aef-970c-f45466ea1552")
 	)
 	(junction
-		(at 135.89 63.5)
+		(at 161.29 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "801f3258-bef0-4608-9b59-524504a97151")
+		(uuid "74428d16-9b34-4f2d-95f5-6b18e617067d")
 	)
 	(junction
-		(at 153.67 91.44)
+		(at 143.51 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "946e7ae8-05bc-4ce0-a6c2-0efeb3742ec6")
+	)
+	(junction
+		(at 161.29 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b143514c-dc85-4ff1-a61c-d94bd244d4bd")
+	)
+	(junction
+		(at 54.61 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b370fa8d-3af5-418b-8829-ab92474534fd")
 	)
 	(junction
 		(at 120.65 78.74)
@@ -1799,10 +1875,10 @@
 		(uuid "b6fd7932-bac1-4d35-bffc-0362fb6a5542")
 	)
 	(junction
-		(at 54.61 80.01)
+		(at 143.51 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bc066ee5-4419-47f5-b070-8293c7e80149")
+		(uuid "befb0032-afbe-4e55-aab7-82951b95276e")
 	)
 	(junction
 		(at 63.5 80.01)
@@ -1810,21 +1886,9 @@
 		(color 0 0 0 0)
 		(uuid "ede2b313-68e9-41fd-9f00-8550f1e93c83")
 	)
-	(no_connect
-		(at 39.37 50.8)
-		(uuid "4f3db8a2-3179-42e3-992f-59f8ffdbb4b2")
-	)
-	(no_connect
-		(at 59.69 43.18)
-		(uuid "8d213467-2c2c-488d-9d6d-6fa27a6ea34f")
-	)
-	(no_connect
-		(at 59.69 48.26)
-		(uuid "bd3dd358-3f03-4ded-911a-70661dd3150d")
-	)
 	(wire
 		(pts
-			(xy 153.67 78.74) (xy 120.65 78.74)
+			(xy 161.29 78.74) (xy 120.65 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1844,7 +1908,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 93.98) (xy 181.61 93.98)
+			(xy 191.77 93.98) (xy 193.04 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1874,17 +1938,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 91.44) (xy 167.64 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ff8a1ae-efc7-4de4-9ed0-3fce89bdf9e2")
-	)
-	(wire
-		(pts
-			(xy 180.34 104.14) (xy 180.34 93.98)
+			(xy 191.77 104.14) (xy 191.77 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1901,16 +1955,6 @@
 			(type default)
 		)
 		(uuid "1a5ddbed-fdc3-45c8-9bf0-7c37187fec21")
-	)
-	(wire
-		(pts
-			(xy 34.29 45.72) (xy 39.37 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29330d0b-792d-46d8-a76c-239930cf4814")
 	)
 	(wire
 		(pts
@@ -1934,7 +1978,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 78.74) (xy 153.67 81.28)
+			(xy 161.29 78.74) (xy 161.29 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1954,23 +1998,43 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 96.52) (xy 167.64 96.52)
+			(xy 161.29 81.28) (xy 168.91 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6b976eb7-af99-4071-841d-3c11cea71db0")
+		(uuid "567df2b1-9fda-4bb5-8af6-4a3241cce1c6")
 	)
 	(wire
 		(pts
-			(xy 34.29 48.26) (xy 39.37 48.26)
+			(xy 143.51 96.52) (xy 179.07 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6c3e2a9e-4461-43a6-955e-1e32f4c08917")
+		(uuid "569dcff1-5bdd-426a-b93e-c9bf4e5eb0f5")
+	)
+	(wire
+		(pts
+			(xy 52.07 34.29) (xy 57.15 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aca72bc-cd2b-4652-856c-6a27eb0dd0b0")
+	)
+	(wire
+		(pts
+			(xy 140.97 91.44) (xy 179.07 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c672ecd-4b97-4d32-9268-323163695c75")
 	)
 	(wire
 		(pts
@@ -1994,7 +2058,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 96.52) (xy 175.26 91.44)
+			(xy 186.69 96.52) (xy 186.69 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2014,7 +2078,17 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 96.52) (xy 167.64 104.14)
+			(xy 143.51 81.28) (xy 151.13 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c789218-bebb-4282-a7f5-1b757051382d")
+	)
+	(wire
+		(pts
+			(xy 179.07 96.52) (xy 179.07 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2054,6 +2128,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 43.18) (xy 48.26 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "951735d6-e5fc-4264-bafa-222c6e8cde20")
+	)
+	(wire
+		(pts
 			(xy 36.83 90.17) (xy 41.91 90.17)
 		)
 		(stroke
@@ -2064,7 +2148,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 96.52) (xy 175.26 96.52)
+			(xy 193.04 96.52) (xy 186.69 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2094,7 +2178,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 104.14) (xy 175.26 99.06)
+			(xy 186.69 104.14) (xy 186.69 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2104,7 +2188,27 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 88.9) (xy 153.67 91.44)
+			(xy 38.1 48.26) (xy 48.26 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf7adb9a-6fbc-44d7-8454-55a933bc588e")
+	)
+	(wire
+		(pts
+			(xy 161.29 88.9) (xy 168.91 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c01f8143-2807-43c5-ba6d-ab017f0256d3")
+	)
+	(wire
+		(pts
+			(xy 161.29 88.9) (xy 161.29 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2134,23 +2238,33 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 40.64) (xy 39.37 40.64)
+			(xy 38.1 45.72) (xy 48.26 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dc12c8b4-78fe-446c-9767-231ae93e1fe3")
+		(uuid "d48eb4aa-145b-4cdb-912e-aed754c4df3a")
 	)
 	(wire
 		(pts
-			(xy 34.29 43.18) (xy 39.37 43.18)
+			(xy 38.1 50.8) (xy 48.26 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "de46cf7d-57fb-482d-abdd-bb95c3c070fd")
+		(uuid "d9a1f387-5271-4906-ac47-0cd16727c939")
+	)
+	(wire
+		(pts
+			(xy 143.51 88.9) (xy 151.13 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db227f10-e496-42fd-9050-25e466168adf")
 	)
 	(wire
 		(pts
@@ -2174,7 +2288,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 99.06) (xy 175.26 99.06)
+			(xy 193.04 99.06) (xy 186.69 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2222,18 +2336,18 @@
 		)
 		(uuid "04523c2b-9b5d-41f5-9de2-a09b15697e02")
 	)
-	(label "SHUTDOWN"
-		(at 59.69 45.72 0)
+	(label "BCLK"
+		(at 38.1 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "1224054f-db33-4a97-8eb8-0b9b37d38866")
+		(uuid "1185ab52-2682-4720-8a81-7ff152491b31")
 	)
 	(label "SPK_MIX_L"
-		(at 156.21 96.52 0)
+		(at 168.91 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2262,15 +2376,15 @@
 		)
 		(uuid "2bd8feaf-b42d-4643-a861-b496ce46b1c1")
 	)
-	(label "WS"
-		(at 34.29 45.72 0)
+	(label "SHUTDOWN"
+		(at 38.1 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2c833bc8-185e-4113-a032-399091d98fbd")
+		(uuid "3b2927d7-c636-4769-bfb1-a074ded90480")
 	)
 	(label "WS"
 		(at 36.83 87.63 0)
@@ -2292,15 +2406,15 @@
 		)
 		(uuid "55573d7e-6437-40d1-93ca-b8de413b22c8")
 	)
-	(label "BCLK"
-		(at 34.29 43.18 0)
+	(label "DIN"
+		(at 38.1 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "7167cb58-f976-415a-9bb7-7da4529af8ec")
+		(uuid "581a06e2-0f93-4c68-b706-32da1d8c1f07")
 	)
 	(label "DIN"
 		(at 36.83 90.17 0)
@@ -2322,8 +2436,18 @@
 		)
 		(uuid "9fe86919-8c49-4af9-a13e-128f84892e77")
 	)
+	(label "WS"
+		(at 38.1 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd237e9e-49c9-4e88-aa31-902f2ebb4ec2")
+	)
 	(label "SPK_MIX_R"
-		(at 156.21 91.44 0)
+		(at 168.91 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2332,19 +2456,9 @@
 		)
 		(uuid "c6ffc0f8-b972-4920-a496-aa2bb85b4296")
 	)
-	(label "DIN"
-		(at 34.29 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e59685cc-43e9-441b-8286-2c3006cf2005")
-	)
 	(symbol
 		(lib_id "power:GND")
-		(at 180.34 104.14 0)
+		(at 191.77 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2355,7 +2469,7 @@
 		(fields_autoplaced yes)
 		(uuid "01025a69-1dc8-4dd6-bf1e-8f31df1d0b4c")
 		(property "Reference" "#PWR02"
-			(at 180.34 110.49 0)
+			(at 191.77 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2366,7 +2480,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 180.34 109.22 0)
+			(at 191.77 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2376,7 +2490,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 104.14 0)
+			(at 191.77 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2387,7 +2501,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 104.14 0)
+			(at 191.77 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2398,7 +2512,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 180.34 104.14 0)
+			(at 191.77 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2412,7 +2526,7 @@
 			(uuid "4c193c9a-0640-4cc5-9625-ce875ba6444d")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR02")
 					(unit 1)
@@ -2421,41 +2535,40 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 135.89 186.69 0)
+		(lib_id "power:GND")
+		(at 58.42 59.69 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "06820015-e60a-457b-910c-e3fe6d0ee85a")
-		(property "Reference" "H_UL1"
-			(at 138.43 185.4199 0)
+		(uuid "05e37b0a-5b2e-4a4a-8264-f26531a5d9e4")
+		(property "Reference" "#PWR012"
+			(at 58.42 66.04 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 138.43 187.9599 0)
+		(property "Value" "GND"
+			(at 58.42 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 135.89 186.69 0)
+		(property "Footprint" ""
+			(at 58.42 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2466,7 +2579,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 186.69 0)
+			(at 58.42 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2476,8 +2589,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 135.89 186.69 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 58.42 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2486,11 +2599,174 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "1"
+			(uuid "ddf3cdc8-15fb-4408-b48b-ae3b71b2fa25")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "H_UL1")
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 151.13 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ba03f96-a34a-4012-87f9-072d3bdd431c")
+		(property "Reference" "C11"
+			(at 154.94 83.8199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "200p"
+			(at 154.94 86.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 152.0952 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 151.13 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "baf497d0-03a5-4998-9751-0009049719a9")
+		)
+		(pin "2"
+			(uuid "b3f06b34-4a4d-4c8f-9750-85b6bf018f92")
+		)
+		(instances
+			(project "pt-i2s-audio"
+				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 52.07 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e60f6a8-f717-49f9-b31e-a3c55282d1b6")
+		(property "Reference" "#PWR014"
+			(at 52.07 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 52.07 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 52.07 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5fb74b7f-5c51-46f1-bb03-4cdad2c8b703")
+		)
+		(instances
+			(project "pt-i2s-audio"
+				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -2566,7 +2842,7 @@
 			(uuid "3cd6e78a-3ce5-4510-aaa0-ada71c9e8d01")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR09")
 					(unit 1)
@@ -2648,7 +2924,7 @@
 			(uuid "ddea6bd1-d5f6-4fef-ab54-43702416c5fa")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R1")
 					(unit 1)
@@ -2658,7 +2934,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 153.67 85.09 0)
+		(at 161.29 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2669,7 +2945,7 @@
 		(fields_autoplaced yes)
 		(uuid "22619ea7-2e3f-4342-bb5b-6b3c859106f1")
 		(property "Reference" "R3"
-			(at 156.21 83.8199 0)
+			(at 163.83 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2680,7 +2956,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 156.21 86.3599 0)
+			(at 163.83 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2691,7 +2967,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 151.892 85.09 90)
+			(at 159.512 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2702,7 +2978,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 85.09 0)
+			(at 161.29 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2713,7 +2989,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 153.67 85.09 0)
+			(at 161.29 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2730,7 +3006,7 @@
 			(uuid "55b29214-001b-4c3d-9e1e-e3ef1b0379e3")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R3")
 					(unit 1)
@@ -2740,7 +3016,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 38.1 40.64 0)
+		(at 95.25 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2749,9 +3025,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2c7ce57b-4dfb-496e-ac30-e4805df43c0d")
+		(uuid "30e07bef-169f-4f72-93f8-dd0616f2a67b")
 		(property "Reference" "#PWR013"
-			(at 38.1 44.45 0)
+			(at 95.25 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2762,7 +3038,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 38.1 35.56 0)
+			(at 95.25 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2771,8 +3047,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 38.1 40.64 0)
+		(property "Footprint" ""
+			(at 95.25 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2783,7 +3059,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 40.64 0)
+			(at 95.25 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2794,7 +3070,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 38.1 40.64 0)
+			(at 95.25 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2805,10 +3081,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d850ddf4-0a1d-425d-91b8-9b29f9dc63f8")
+			(uuid "9aefac66-32aa-4e32-9031-7b68b5b45f1e")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR013")
 					(unit 1)
@@ -2817,84 +3093,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 154.94 186.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "31438c76-6273-49b0-9182-d057f4e1ba7a")
-		(property "Reference" "H_UR1"
-			(at 157.48 185.4199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 157.48 187.9599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 154.94 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 154.94 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "atom-audio"
-				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "H_UR1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Audio:AudioJack3")
-		(at 186.69 96.52 0)
+		(at 198.12 96.52 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2905,7 +3105,7 @@
 		(dnp no)
 		(uuid "3b6be9ca-fa09-4be5-9491-fd85f89c066a")
 		(property "Reference" "J1"
-			(at 188.595 87.63 0)
+			(at 200.025 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2915,7 +3115,7 @@
 			)
 		)
 		(property "Value" "AudioJack3"
-			(at 188.595 90.17 0)
+			(at 200.025 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2925,7 +3125,7 @@
 			)
 		)
 		(property "Footprint" "MyLibrary:Jack_3.5mm_Switronic_ST-005-G_THT_Horizontal"
-			(at 186.69 96.52 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2936,7 +3136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 96.52 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2947,7 +3147,7 @@
 			)
 		)
 		(property "Description" "Audio Jack, 3 Poles (Stereo / TRS)"
-			(at 186.69 96.52 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2967,87 +3167,9 @@
 			(uuid "522e9f26-096f-4951-a124-6be85fe6e257")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 59.69 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3e51e826-2af1-4b3b-b503-fe53144e4dfa")
-		(property "Reference" "#PWR04"
-			(at 59.69 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 59.69 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 59.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1c3a5da3-d7af-4ddc-b0e0-3c1291dad31b")
-		)
-		(instances
-			(project "atom-audio"
-				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -3127,87 +3249,9 @@
 			(uuid "038b9c01-c23a-48f5-9190-a155ce47f9d0")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 54.61 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "42dc9228-6f11-4f0f-af1f-5b9b38118f77")
-		(property "Reference" "#PWR015"
-			(at 54.61 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 54.61 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 54.61 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 54.61 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e0f30068-2bfe-4c56-b4e6-9d10221e2a98")
-		)
-		(instances
-			(project "atom-audio"
-				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -3287,9 +3331,87 @@
 			(uuid "67f94d74-cdea-4978-9a9e-481b3233c727")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 54.61 80.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76e1eb26-57a2-4df0-8eb1-60b87cf1c573")
+		(property "Reference" "#PWR04"
+			(at 54.61 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 54.61 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 54.61 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bc3cdfee-5fcd-48bf-87a1-45b45215d96c")
+		)
+		(instances
+			(project "pt-i2s-audio"
+				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -3369,7 +3491,7 @@
 			(uuid "de9a3cef-99af-4c93-bd05-595eea6f27b8")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C4")
 					(unit 1)
@@ -3378,8 +3500,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 135.89 63.5 0)
+		(lib_id "power:VDD")
+		(at 60.96 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3388,9 +3510,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7cf31ed4-3423-410e-b4c3-325147beb085")
-		(property "Reference" "#PWR018"
-			(at 135.89 67.31 0)
+		(uuid "7bdba6e1-edb5-4264-8827-47228cc3f779")
+		(property "Reference" "#PWR01"
+			(at 60.96 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3400,8 +3522,8 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 135.89 58.42 0)
+		(property "Value" "VDD"
+			(at 60.96 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3410,8 +3532,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 135.89 63.5 0)
+		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+			(at 60.96 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3422,7 +3544,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 63.5 0)
+			(at 60.96 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3432,8 +3554,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 135.89 63.5 0)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 60.96 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3444,12 +3566,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6b1bbc50-6722-4673-aa4c-d99431391652")
+			(uuid "d22b6383-ffd0-4c8a-9b07-2208c3eacb9b")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "#PWR018")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -3525,85 +3647,9 @@
 			(uuid "8d8ccd1d-3db5-4a03-a22f-9309e737640e")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 135.89 191.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7dbc8624-3fb6-43b6-be8b-01f466292223")
-		(property "Reference" "H_LL1"
-			(at 138.43 190.4999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 138.43 193.0399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 135.89 191.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 191.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 135.89 191.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "atom-audio"
-				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "H_LL1")
 					(unit 1)
 				)
 			)
@@ -3683,7 +3729,7 @@
 			(uuid "6bfecfb6-b74e-4eb9-a3e4-209db52c2e13")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C5")
 					(unit 1)
@@ -3765,7 +3811,7 @@
 			(uuid "6710c16c-9ca3-43a9-a1a5-bebfb3f68a87")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C9")
 					(unit 1)
@@ -3843,7 +3889,7 @@
 			(uuid "bd416a01-0478-40d8-b039-02c710fe2bf7")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR03")
 					(unit 1)
@@ -3925,7 +3971,7 @@
 			(uuid "1a4760b1-1be6-4cb6-8bbc-c0dead1def93")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C6")
 					(unit 1)
@@ -3943,10 +3989,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "96304f5a-36b0-4c66-a1cf-a92eec6f7850")
 		(property "Reference" "U3"
-			(at 57.15 91.4399 0)
+			(at 48.26 103.886 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3956,7 +4001,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "PT8211"
 			(at 52.07 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3966,7 +4011,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SOP-8_3.76x4.96mm_P1.27mm"
 			(at 52.07 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -3977,7 +4022,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://akizukidenshi.com/goodsaffix/pt8211.pdf"
 			(at 52.07 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -4024,7 +4069,7 @@
 			(uuid "e8a55f82-48db-4dc5-b7ce-f3a1dc9aba1c")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U3")
 					(unit 1)
@@ -4033,187 +4078,8 @@
 		)
 	)
 	(symbol
-		(lib_id "MyLibrary:M5Atom_Lite")
-		(at 49.53 44.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a30c5b94-2da2-4def-a09b-a966bba1b78e")
-		(property "Reference" "U2"
-			(at 49.53 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 49.53 44.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "MyLibrary:M5Atom_Lite"
-			(at 49.53 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 49.53 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cbb92ff3-16ee-43b4-b98f-d40a11e1619b")
-		)
-		(pin "6"
-			(uuid "e837eb4e-812f-4a07-ae19-44e455b7785e")
-		)
-		(pin "3"
-			(uuid "d92764c5-35ba-4adf-9a3e-b72a621173f2")
-		)
-		(pin "9"
-			(uuid "5254a05c-8cd6-4b17-8466-16086838aa70")
-		)
-		(pin "8"
-			(uuid "f3c531f4-8333-4cbc-9559-94ec3e1957a5")
-		)
-		(pin "1"
-			(uuid "b560635e-f4b3-454d-b37b-ce633b99a421")
-		)
-		(pin "4"
-			(uuid "bb9c2d8b-4d1f-44e0-aac1-52d4f142c882")
-		)
-		(pin "7"
-			(uuid "f88ce301-5e43-4048-9303-0642750a2aa3")
-		)
-		(pin "5"
-			(uuid "02b26064-a661-465e-90eb-af3bcebe90f0")
-		)
-		(instances
-			(project "atom-audio"
-				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 95.25 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bb676fef-e9e7-4cb1-9b7e-ea65f93ac642")
-		(property "Reference" "#PWR019"
-			(at 95.25 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 95.25 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 95.25 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 95.25 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dcf1a18d-dfe7-4a0b-82b4-52acca0dade6")
-		)
-		(instances
-			(project "atom-audio"
-				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 171.45 91.44 90)
+		(at 182.88 91.44 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4224,7 +4090,7 @@
 		(fields_autoplaced yes)
 		(uuid "c651484d-7fd1-495e-8646-ddbb177018cc")
 		(property "Reference" "C1"
-			(at 170.561 83.82 90)
+			(at 181.991 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4234,7 +4100,7 @@
 			)
 		)
 		(property "Value" "470u"
-			(at 170.561 86.36 90)
+			(at 181.991 86.36 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4243,8 +4109,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
-			(at 175.26 90.4748 0)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
+			(at 186.69 90.4748 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4255,7 +4121,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 91.44 0)
+			(at 182.88 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4266,7 +4132,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 171.45 91.44 0)
+			(at 182.88 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4283,7 +4149,7 @@
 			(uuid "432fa699-9223-477c-9564-6f6247301965")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C1")
 					(unit 1)
@@ -4361,7 +4227,7 @@
 			(uuid "13f3a9fd-353a-4d65-bedb-1260969d62ff")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR06")
 					(unit 1)
@@ -4443,7 +4309,7 @@
 			(uuid "854e2537-4ddf-452c-b766-e800c0ff0808")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C8")
 					(unit 1)
@@ -4521,7 +4387,7 @@
 			(uuid "b25ea088-addb-45a9-b11f-0eae9efc93d1")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR010")
 					(unit 1)
@@ -4599,7 +4465,7 @@
 			(uuid "d3385e91-688c-428b-80e6-a00a956bb486")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR07")
 					(unit 1)
@@ -4681,7 +4547,7 @@
 			(uuid "aee8dcb5-78be-4aa0-9722-98733056c211")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R5")
 					(unit 1)
@@ -4711,7 +4577,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "LM4881MX"
 			(at 133.35 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4721,7 +4587,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm"
+		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
 			(at 133.35 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -4732,7 +4598,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/product/ja-jp/LM4881/part-details/LM4881MX/NOPB"
 			(at 133.35 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -4779,7 +4645,7 @@
 			(uuid "f71279ac-51d2-4c62-8337-532c700ab5bf")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U4")
 					(unit 1)
@@ -4788,8 +4654,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 171.45 104.14 90)
+		(lib_id "power:VDD")
+		(at 146.05 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4798,9 +4664,10 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "e228078e-08bb-416d-88ce-5db7559815ea")
-		(property "Reference" "C2"
-			(at 170.561 96.52 90)
+		(uuid "debb4172-b67e-4017-bb82-1ea293a42a68")
+		(property "Reference" "#PWR05"
+			(at 146.05 67.31 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4809,8 +4676,8 @@
 				)
 			)
 		)
-		(property "Value" "470u"
-			(at 170.561 99.06 90)
+		(property "Value" "VDD"
+			(at 146.05 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4819,8 +4686,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
-			(at 175.26 103.1748 0)
+		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+			(at 146.05 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4831,7 +4698,84 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 104.14 0)
+			(at 146.05 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 146.05 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8d1d2252-923b-437a-9d87-80259b7ce4e4")
+		)
+		(instances
+			(project "pt-i2s-audio"
+				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 182.88 104.14 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e228078e-08bb-416d-88ce-5db7559815ea")
+		(property "Reference" "C2"
+			(at 181.991 96.52 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470u"
+			(at 181.991 99.06 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
+			(at 186.69 103.1748 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4842,7 +4786,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 171.45 104.14 0)
+			(at 182.88 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4859,7 +4803,7 @@
 			(uuid "08d11848-339c-4055-9b3d-463583e1089d")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C2")
 					(unit 1)
@@ -4937,9 +4881,195 @@
 			(uuid "84dcac64-fcb9-4164-b0ba-f23ad0d59804")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 168.91 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e689f747-ede3-40a1-9780-9b8e55d83aa5")
+		(property "Reference" "C10"
+			(at 172.72 83.8199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "200p"
+			(at 172.72 86.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 169.8752 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 168.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1cc01bab-9dcd-4381-87b4-acedd199d75d")
+		)
+		(pin "2"
+			(uuid "fb18bc23-546c-427b-827b-19edc8d0767b")
+		)
+		(instances
+			(project "pt-i2s-audio"
+				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MyLibrary:PT8211-I2S-Audio_Module")
+		(at 58.42 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f266a4ea-264f-45c3-ad6a-5e0e65d67615")
+		(property "Reference" "U1"
+			(at 57.15 46.736 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 58.42 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyLibrary:PT8211-I2C-Audio_Module"
+			(at 58.42 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "1704f872-ed71-4384-90a3-390a9e630b22")
+		)
+		(pin "2"
+			(uuid "e23c8b51-17f8-4ed6-a851-f1df09abd444")
+		)
+		(pin "4"
+			(uuid "0d2833c4-ebeb-478f-912e-369529e2ee0c")
+		)
+		(pin "5"
+			(uuid "17c0e17b-3f31-4020-9ead-fb573db15a42")
+		)
+		(pin "1"
+			(uuid "59344675-c136-49ed-84fc-11fab2ea3e3b")
+		)
+		(pin "3"
+			(uuid "db889946-c2ef-4357-895a-f796060a182f")
+		)
+		(pin "7"
+			(uuid "88c2c1f2-803a-40db-bd4b-7af2fc7a84b8")
+		)
+		(pin "8"
+			(uuid "f12f4f3a-f596-4785-9286-64107198a71b")
+		)
+		(pin "9"
+			(uuid "a0937d86-5691-4722-9722-24ff616b88ba")
+		)
+		(pin "10"
+			(uuid "4b5531a1-a209-4aef-9d8b-75d2bbe6147e")
+		)
+		(instances
+			(project "pt-i2s-audio"
+				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -5019,7 +5149,7 @@
 			(uuid "fd821237-e08f-4614-a0e8-9cbd8da93f0a")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C7")
 					(unit 1)
@@ -5101,7 +5231,7 @@
 			(uuid "c11903c6-006e-4fdb-9412-0755dde3c52b")
 		)
 		(instances
-			(project "atom-audio"
+			(project "pt-i2s-audio"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C3")
 					(unit 1)

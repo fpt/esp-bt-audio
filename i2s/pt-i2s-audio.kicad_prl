@@ -63,7 +63,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "atom-audio.kicad_prl",
+    "filename": "pt-i2s-audio.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
