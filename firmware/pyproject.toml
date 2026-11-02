@@ -1,0 +1,12 @@
+[project]
+name = "esp-bt-audio-tools"
+version = "0.1.0"
+description = "Host-side tools for the esp-bt-audio firmware (flashing, log console)"
+requires-python = ">=3.11"
+dependencies = [
+    "esptool>=5.0",
+    "pyserial>=3.5",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,7 @@
+build/
+sdkconfig
+sdkconfig.old
+.venv/
+__pycache__/
+# The root .gitignore drops *.csv (KiCad exports); the partition table is source.
+!partitions.csv

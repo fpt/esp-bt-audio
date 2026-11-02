@@ -1,0 +1,89 @@
+menu "BT Audio Receiver"
+
+    config BTR_DEVICE_NAME
+        string "Bluetooth device name"
+        default "ESP-BT-Audio"
+
+    config BTR_PIN_CODE
+        string "Legacy pairing PIN"
+        default "0000"
+        help
+            Only used by peers without Secure Simple Pairing. SSP is Just Works.
+
+    config BTR_PAIRING_TIMEOUT
+        int "Discoverable time after boot or a pairing request (s, 0 = until connected)"
+        default 120
+        help
+            After this the device stays connectable (known phones can reconnect)
+            but is no longer discoverable.
+
+    menu "Pins"
+
+        config BTR_I2S_BCK_GPIO
+            int "I2S BCK (PT8211 BCK)"
+            default 26
+
+        config BTR_I2S_WS_GPIO
+            int "I2S WS (PT8211 WS)"
+            default 25
+
+        config BTR_I2S_DATA_GPIO
+            int "I2S DATA (PT8211 DIN)"
+            default 27
+
+        config BTR_AMP_SD_GPIO
+            int "LM4881 SHUTDOWN (high = shutdown)"
+            default 23
+
+        config BTR_POWER_HOLD_GPIO
+            int "Power latch (high keeps the RT9080 on)"
+            default 15
+
+        config BTR_PWR_BTN_GPIO
+            int "Power button sense (high = pressed, external divider)"
+            default 34
+
+        config BTR_BT_BTN_GPIO
+            int "BT button (low = pressed, internal pull-up)"
+            default 13
+
+        config BTR_LED_GPIO
+            int "WS2812B status LED DIN"
+            default 14
+
+        config BTR_BAT_ADC_GPIO
+            int "Battery sense (1/2 divider, must be an ADC1 pin)"
+            default 35
+
+    endmenu
+
+    config BTR_SWAP_LR
+        bool "Swap left/right channels"
+        default n
+        help
+            Set if the PT8211 plays left on the right ear.
+
+    config BTR_LED_BRIGHTNESS
+        int "Status LED brightness"
+        range 1 255
+        default 40
+
+    config BTR_BAT_LOW_MV
+        int "Low battery warning (mV)"
+        default 3400
+
+    config BTR_BAT_OFF_MV
+        int "Power off below this battery voltage (mV)"
+        default 3200
+
+    config BTR_IDLE_OFF_MIN
+        int "Power off after this long without a connection (min, 0 = never)"
+        default 10
+
+    config BTR_AMP_OFF_DELAY_MS
+        int "Keep the amp on this long after audio stops (ms)"
+        default 5000
+        help
+            Avoids shutdown/startup clicks on short pauses.
+
+endmenu

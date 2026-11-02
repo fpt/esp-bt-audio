@@ -1,0 +1,34 @@
+# Deltas on top of ESP-IDF defaults. After editing, `make build` regenerates sdkconfig.
+CONFIG_IDF_TARGET="esp32"
+
+# --- Flash / partitions (ESP32-WROOM-32E, 4 MB) ---
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+
+# --- Compiler ---
+# SBC decode at 48 kHz wants real optimisation.
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# --- Clocks / power ---
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ=160
+# Audio streaming and tickless idle don't mix.
+CONFIG_FREERTOS_USE_TICKLESS_IDLE=n
+
+# --- Bluetooth Classic only (A2DP sink + AVRCP) ---
+CONFIG_BT_ENABLED=y
+CONFIG_BT_BLUEDROID_ENABLED=y
+CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY=y
+CONFIG_BTDM_CTRL_BR_EDR_MAX_ACL_CONN=2
+CONFIG_BT_CLASSIC_ENABLED=y
+CONFIG_BT_A2DP_ENABLE=y
+CONFIG_BT_AVRCP_ENABLED=y
+# Cover art (OBEX/BIP) is unused; SSP is enabled at runtime (bt.c, ssp_en).
+CONFIG_BT_AVRCP_CT_COVER_ART_ENABLED=n
+CONFIG_BT_BLE_ENABLED=n
+CONFIG_BT_SPP_ENABLED=n
+
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+CONFIG_APP_PROJECT_VER="0.1.0"
