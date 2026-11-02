@@ -2,7 +2,7 @@
 
 ESP-IDF v5.4 firmware for the main board (ESP32-WROOM-32E): Bluetooth A2DP sink + AVRCP,
 decoded audio out over I2S to the PT8211 on the i2s-power board, LM4881 headphone amp.
-The Bluetooth and LED code is adapted from `../../../rp-esp-wifi-bta`
+The Bluetooth and LED code is adapted from `../../rp-esp-wifi-bta`
 (`components/at_btaudio`), without its AT command layer.
 
 Hardware: [../docs/esp_bt_audio_receiver.md](../docs/esp_bt_audio_receiver.md).
