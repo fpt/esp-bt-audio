@@ -1528,7 +1528,7 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -1.27 0)
+					(at -12.7 2.54 0)
 					(length 2.54)
 					(name "BCLK"
 						(effects
@@ -1546,7 +1546,7 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -3.81 0)
+					(at -12.7 0 0)
 					(length 2.54)
 					(name "WS"
 						(effects
@@ -1564,7 +1564,7 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -6.35 0)
+					(at -12.7 -2.54 0)
 					(length 2.54)
 					(name "DIN"
 						(effects
@@ -1582,9 +1582,9 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -8.89 0)
+					(at -12.7 -5.08 0)
 					(length 2.54)
-					(name "SHUTDOWN"
+					(name "MCLK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1599,10 +1599,10 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 12.7 2.54 180)
+				(pin passive line
+					(at -12.7 -7.62 0)
 					(length 2.54)
-					(name "NC"
+					(name "MUTE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1689,7 +1689,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin power_out line
 					(at 0 -17.78 90)
 					(length 2.54)
 					(name "GND"
@@ -2244,6 +2244,10 @@
 		(at 105.41 129.54)
 		(uuid "1b370343-415c-4755-8747-8a62a4f22088")
 	)
+	(no_connect
+		(at 44.45 48.26)
+		(uuid "ab7018b5-f2cb-4476-892d-64b989a133ef")
+	)
 	(wire
 		(pts
 			(xy 161.29 78.74) (xy 120.65 78.74)
@@ -2276,7 +2280,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 44.45) (xy 44.45 44.45)
+			(xy 34.29 40.64) (xy 44.45 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2496,7 +2500,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 49.53) (xy 44.45 49.53)
+			(xy 34.29 45.72) (xy 44.45 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2626,7 +2630,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 46.99) (xy 44.45 46.99)
+			(xy 34.29 43.18) (xy 44.45 43.18)
 		)
 		(stroke
 			(width 0)
@@ -2706,13 +2710,13 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 52.07) (xy 44.45 52.07)
+			(xy 34.29 50.8) (xy 44.45 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f110acba-cd22-4682-8809-562b58d22712")
+		(uuid "f1edd07b-cb54-4969-b52e-4fcc1a85ddca")
 	)
 	(wire
 		(pts
@@ -2765,7 +2769,7 @@
 		(uuid "0a3e7851-a487-4224-99ff-2d53a7839316")
 	)
 	(label "BCLK"
-		(at 34.29 44.45 0)
+		(at 34.29 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2804,16 +2808,6 @@
 		)
 		(uuid "2bd8feaf-b42d-4643-a861-b496ce46b1c1")
 	)
-	(label "SHUTDOWN"
-		(at 34.29 52.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3b2927d7-c636-4769-bfb1-a074ded90480")
-	)
 	(label "WS"
 		(at 36.83 87.63 0)
 		(effects
@@ -2835,7 +2829,7 @@
 		(uuid "55573d7e-6437-40d1-93ca-b8de413b22c8")
 	)
 	(label "DIN"
-		(at 34.29 49.53 0)
+		(at 34.29 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2843,6 +2837,16 @@
 			(justify left bottom)
 		)
 		(uuid "581a06e2-0f93-4c68-b706-32da1d8c1f07")
+	)
+	(label "SHUTDOWN"
+		(at 34.29 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "723086e3-fb8e-4d31-ac6c-6b1bb03eba96")
 	)
 	(label "3V3_EN"
 		(at 43.18 139.7 0)
@@ -2875,7 +2879,7 @@
 		(uuid "9fe86919-8c49-4af9-a13e-128f84892e77")
 	)
 	(label "WS"
-		(at 34.29 46.99 0)
+		(at 34.29 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2964,7 +2968,7 @@
 			(uuid "e61871bd-1c2d-4f6e-a833-4dcd09081a62")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR023")
 					(unit 1)
@@ -3042,7 +3046,7 @@
 			(uuid "4c193c9a-0640-4cc5-9625-ce875ba6444d")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR02")
 					(unit 1)
@@ -3120,7 +3124,7 @@
 			(uuid "0beb0d33-8e18-4dac-9611-34e2db914363")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR021")
 					(unit 1)
@@ -3198,7 +3202,7 @@
 			(uuid "ddf3cdc8-15fb-4408-b48b-ae3b71b2fa25")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR012")
 					(unit 1)
@@ -3280,7 +3284,7 @@
 			(uuid "b3f06b34-4a4d-4c8f-9750-85b6bf018f92")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C11")
 					(unit 1)
@@ -3363,7 +3367,7 @@
 			(uuid "6c49cb2f-3111-431e-b602-58f4a3599467")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U2")
 					(unit 1)
@@ -3441,7 +3445,7 @@
 			(uuid "5fb74b7f-5c51-46f1-bb03-4cdad2c8b703")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR014")
 					(unit 1)
@@ -3519,7 +3523,7 @@
 			(uuid "3cd6e78a-3ce5-4510-aaa0-ada71c9e8d01")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR09")
 					(unit 1)
@@ -3601,7 +3605,7 @@
 			(uuid "ddea6bd1-d5f6-4fef-ab54-43702416c5fa")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R1")
 					(unit 1)
@@ -3683,7 +3687,7 @@
 			(uuid "55b29214-001b-4c3d-9e1e-e3ef1b0379e3")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R3")
 					(unit 1)
@@ -3761,7 +3765,7 @@
 			(uuid "da108470-fe8a-4bf3-9385-893f5212e663")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR020")
 					(unit 1)
@@ -3839,7 +3843,7 @@
 			(uuid "9aefac66-32aa-4e32-9031-7b68b5b45f1e")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR013")
 					(unit 1)
@@ -3922,7 +3926,7 @@
 			(uuid "522e9f26-096f-4951-a124-6be85fe6e257")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "J1")
 					(unit 1)
@@ -4000,7 +4004,7 @@
 			(uuid "7a98fd07-9d94-4c80-be2b-3c6aabf9140d")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR022")
 					(unit 1)
@@ -4082,7 +4086,7 @@
 			(uuid "038b9c01-c23a-48f5-9190-a155ce47f9d0")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R4")
 					(unit 1)
@@ -4164,7 +4168,7 @@
 			(uuid "67f94d74-cdea-4978-9a9e-481b3233c727")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R2")
 					(unit 1)
@@ -4246,7 +4250,7 @@
 			(uuid "483264e5-41a1-48f6-ae3a-c7459f2a87e1")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C12")
 					(unit 1)
@@ -4324,7 +4328,7 @@
 			(uuid "84412f21-1713-4de7-afbc-7bde791eb77c")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR024")
 					(unit 1)
@@ -4406,7 +4410,7 @@
 			(uuid "187aad5e-e0db-4ead-8ce5-188afd28ab80")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C13")
 					(unit 1)
@@ -4484,7 +4488,7 @@
 			(uuid "6670ed47-9818-4171-b889-21435716db65")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR025")
 					(unit 1)
@@ -4562,7 +4566,7 @@
 			(uuid "bc3cdfee-5fcd-48bf-87a1-45b45215d96c")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR04")
 					(unit 1)
@@ -4644,7 +4648,7 @@
 			(uuid "de9a3cef-99af-4c93-bd05-595eea6f27b8")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C4")
 					(unit 1)
@@ -4722,7 +4726,7 @@
 			(uuid "d22b6383-ffd0-4c8a-9b07-2208c3eacb9b")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR01")
 					(unit 1)
@@ -4800,7 +4804,7 @@
 			(uuid "8d8ccd1d-3db5-4a03-a22f-9309e737640e")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR08")
 					(unit 1)
@@ -4882,7 +4886,7 @@
 			(uuid "6bfecfb6-b74e-4eb9-a3e4-209db52c2e13")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C5")
 					(unit 1)
@@ -4964,7 +4968,7 @@
 			(uuid "6710c16c-9ca3-43a9-a1a5-bebfb3f68a87")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C9")
 					(unit 1)
@@ -5042,7 +5046,7 @@
 			(uuid "bd416a01-0478-40d8-b039-02c710fe2bf7")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR03")
 					(unit 1)
@@ -5124,7 +5128,7 @@
 			(uuid "1a4760b1-1be6-4cb6-8bbc-c0dead1def93")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C6")
 					(unit 1)
@@ -5222,7 +5226,7 @@
 			(uuid "e8a55f82-48db-4dc5-b7ce-f3a1dc9aba1c")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U3")
 					(unit 1)
@@ -5311,7 +5315,7 @@
 			(uuid "e1cf1075-3752-4ffe-95cf-237be9622fdf")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U6")
 					(unit 1)
@@ -5391,7 +5395,7 @@
 			(uuid "432fa699-9223-477c-9564-6f6247301965")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C1")
 					(unit 1)
@@ -5469,7 +5473,7 @@
 			(uuid "13f3a9fd-353a-4d65-bedb-1260969d62ff")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR06")
 					(unit 1)
@@ -5547,7 +5551,7 @@
 			(uuid "f619b890-80b4-416b-aae6-c6de811f471e")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR016")
 					(unit 1)
@@ -5629,7 +5633,7 @@
 			(uuid "854e2537-4ddf-452c-b766-e800c0ff0808")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C8")
 					(unit 1)
@@ -5707,7 +5711,7 @@
 			(uuid "b25ea088-addb-45a9-b11f-0eae9efc93d1")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR010")
 					(unit 1)
@@ -5785,7 +5789,7 @@
 			(uuid "d3385e91-688c-428b-80e6-a00a956bb486")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR07")
 					(unit 1)
@@ -5867,7 +5871,7 @@
 			(uuid "aee8dcb5-78be-4aa0-9722-98733056c211")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R5")
 					(unit 1)
@@ -5965,7 +5969,7 @@
 			(uuid "f71279ac-51d2-4c62-8337-532c700ab5bf")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U4")
 					(unit 1)
@@ -6045,7 +6049,7 @@
 			(uuid "08d11848-339c-4055-9b3d-463583e1089d")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C2")
 					(unit 1)
@@ -6127,7 +6131,7 @@
 			(uuid "4e851042-2d2e-4d09-b270-279bfff9767b")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "R6")
 					(unit 1)
@@ -6205,7 +6209,7 @@
 			(uuid "84dcac64-fcb9-4164-b0ba-f23ad0d59804")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR011")
 					(unit 1)
@@ -6287,7 +6291,7 @@
 			(uuid "fb18bc23-546c-427b-827b-19edc8d0767b")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C10")
 					(unit 1)
@@ -6365,7 +6369,7 @@
 			(uuid "6df4af5c-78b1-4512-8b3c-e02a984e9e27")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR019")
 					(unit 1)
@@ -6443,7 +6447,7 @@
 			(uuid "56dab8a0-0fd1-4f63-9f1f-623d3db2d775")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "#PWR015")
 					(unit 1)
@@ -6550,7 +6554,7 @@
 			(uuid "398a2270-52cb-48cf-bacb-2b8b1310d510")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "U1")
 					(unit 1)
@@ -6632,7 +6636,7 @@
 			(uuid "fd821237-e08f-4614-a0e8-9cbd8da93f0a")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C7")
 					(unit 1)
@@ -6714,7 +6718,7 @@
 			(uuid "c11903c6-006e-4fdb-9412-0755dde3c52b")
 		)
 		(instances
-			(project "pt-i2s-audio"
+			(project "i2s-power"
 				(path "/d81566a3-7efd-4872-99ce-e846bc969601"
 					(reference "C3")
 					(unit 1)

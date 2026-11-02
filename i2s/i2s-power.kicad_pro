@@ -507,7 +507,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pt-i2s-audio.kicad_pro",
+    "filename": "i2s-power.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -692,8 +692,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "pt-i2s-audio.kicad_sch",
-        "name": "pt-i2s-audio",
+        "filename": "i2s-power.kicad_sch",
+        "name": "i2s-power",
         "uuid": "d81566a3-7efd-4872-99ce-e846bc969601"
       }
     ],
@@ -703,7 +703,7 @@
   "sheets": [
     [
       "d81566a3-7efd-4872-99ce-e846bc969601",
-      "pt-i2s-audio"
+      "i2s-power"
     ]
   ],
   "text_variables": {},

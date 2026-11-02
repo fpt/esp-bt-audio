@@ -1216,7 +1216,7 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -1.27 0)
+					(at -12.7 2.54 0)
 					(length 2.54)
 					(name "BCLK"
 						(effects
@@ -1234,7 +1234,7 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -3.81 0)
+					(at -12.7 0 0)
 					(length 2.54)
 					(name "WS"
 						(effects
@@ -1252,7 +1252,7 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -6.35 0)
+					(at -12.7 -2.54 0)
 					(length 2.54)
 					(name "DIN"
 						(effects
@@ -1270,9 +1270,9 @@
 					)
 				)
 				(pin passive line
-					(at -12.7 -8.89 0)
+					(at -12.7 -5.08 0)
 					(length 2.54)
-					(name "SHUTDOWN"
+					(name "MCLK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1287,10 +1287,10 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 12.7 2.54 180)
+				(pin passive line
+					(at -12.7 -7.62 0)
 					(length 2.54)
-					(name "NC"
+					(name "MUTE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2912,6 +2912,10 @@
 		(uuid "0f5d5db6-8d12-4281-8546-739724f9d6b0")
 	)
 	(no_connect
+		(at 162.56 48.26)
+		(uuid "2204b40b-b06e-4898-8ffc-7e4fde7b0c24")
+	)
+	(no_connect
 		(at 57.15 55.88)
 		(uuid "27d5f1b8-99ef-4aa9-8c0e-92260bf370b5")
 	)
@@ -2989,7 +2993,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 44.45) (xy 162.56 44.45)
+			(xy 151.13 40.64) (xy 162.56 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3009,7 +3013,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 49.53) (xy 162.56 49.53)
+			(xy 151.13 45.72) (xy 162.56 45.72)
 		)
 		(stroke
 			(width 0)
@@ -3059,7 +3063,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 46.99) (xy 162.56 46.99)
+			(xy 151.13 43.18) (xy 162.56 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3079,7 +3083,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 52.07) (xy 162.56 52.07)
+			(xy 151.13 50.8) (xy 162.56 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3348,7 +3352,7 @@
 		(uuid "0a5af63c-f914-496a-8f48-2e42aa95bdfb")
 	)
 	(label "BCLK"
-		(at 151.13 44.45 0)
+		(at 151.13 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3418,7 +3422,7 @@
 		(uuid "465d171f-64f2-43fe-9f72-f0bf76dff2b4")
 	)
 	(label "SHUTDOWN"
-		(at 151.13 52.07 0)
+		(at 151.13 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3518,7 +3522,7 @@
 		(uuid "ce043e5f-40a5-4d9c-838f-97d587405445")
 	)
 	(label "DATA"
-		(at 151.13 49.53 0)
+		(at 151.13 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3558,7 +3562,7 @@
 		(uuid "e7849eec-4f01-4c38-8d87-f10d03998ea5")
 	)
 	(label "WS"
-		(at 151.13 46.99 0)
+		(at 151.13 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
