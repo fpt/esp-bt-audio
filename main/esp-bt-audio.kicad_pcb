@@ -7007,10 +7007,10 @@
 		(layer "User.1")
 		(uuid "d445317d-e3c3-4a4b-9727-f6fb1d874de8")
 	)
-	(gr_text "ESP32 BT Audio\nVer 0.1 / 2026\nYouichi Fujimoto"
-		(at 130.7 113.8 0)
+	(gr_text "ESP32 BT Audio v0.1\n(c) 2026 Youichi Fujimoto"
+		(at 127.8 112.2 0)
 		(layer "F.SilkS")
-		(uuid "8638507c-77c2-41df-9cb7-6adb9a5c50ca")
+		(uuid "5eee751c-c314-44be-9f4b-a174014857a8")
 		(effects
 			(font
 				(size 1 1)
