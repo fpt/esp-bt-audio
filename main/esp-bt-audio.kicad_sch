@@ -1198,7 +1198,7 @@
 					)
 				)
 				(pin power_out line
-					(at -1.27 17.78 270)
+					(at -3.81 17.78 270)
 					(length 2.54)
 					(name "3V3"
 						(effects
@@ -1341,10 +1341,10 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at -12.7 7.62 0)
+				(pin no_connect line
+					(at 12.7 -5.08 180)
 					(length 2.54)
-					(name "3V3_EN"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1360,7 +1360,43 @@
 					)
 				)
 				(pin power_out line
-					(at 2.54 17.78 270)
+					(at -12.7 7.62 0)
+					(length 2.54)
+					(name "3V3_EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 17.78 270)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 3.81 17.78 270)
 					(length 2.54)
 					(name "VDD"
 						(effects
@@ -1369,7 +1405,7 @@
 							)
 						)
 					)
-					(number "12"
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1387,7 +1423,7 @@
 							)
 						)
 					)
-					(number "[2,11]"
+					(number "[2,13]"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2952,6 +2988,10 @@
 		(uuid "85ec577d-5dcf-446f-bf7e-0223f8f4298f")
 	)
 	(no_connect
+		(at 175.26 25.4)
+		(uuid "9cad5eb9-081a-4690-9f44-87944706026a")
+	)
+	(no_connect
 		(at 87.63 83.82)
 		(uuid "aa1633ab-8601-45d1-9747-c8eb6ec6c4f7")
 	)
@@ -3050,16 +3090,6 @@
 			(type default)
 		)
 		(uuid "238f0938-9f11-4419-87a2-050347574493")
-	)
-	(wire
-		(pts
-			(xy 182.88 25.4) (xy 177.8 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b1f4aeb-135c-467e-819b-7142470f8a38")
 	)
 	(wire
 		(pts
@@ -5581,7 +5611,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 173.99 25.4 0)
+		(at 171.45 25.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5592,7 +5622,7 @@
 		(fields_autoplaced yes)
 		(uuid "a1d6b328-7f5b-418c-9d8a-aa9c28167735")
 		(property "Reference" "#PWR011"
-			(at 173.99 29.21 0)
+			(at 171.45 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5603,7 +5633,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 173.99 20.32 0)
+			(at 171.45 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5613,7 +5643,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 25.4 0)
+			(at 171.45 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5624,7 +5654,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 25.4 0)
+			(at 171.45 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5635,7 +5665,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 173.99 25.4 0)
+			(at 171.45 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5977,7 +6007,7 @@
 	)
 	(symbol
 		(lib_id "power:VDD")
-		(at 182.88 25.4 0)
+		(at 179.07 25.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5988,7 +6018,7 @@
 		(fields_autoplaced yes)
 		(uuid "c6aa588f-3249-430b-8ed4-fdcc19bddaca")
 		(property "Reference" "#PWR01"
-			(at 182.88 29.21 0)
+			(at 179.07 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5999,7 +6029,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 182.88 20.32 0)
+			(at 179.07 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6009,7 +6039,7 @@
 			)
 		)
 		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
-			(at 182.88 25.4 0)
+			(at 179.07 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6020,7 +6050,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 182.88 25.4 0)
+			(at 179.07 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6031,7 +6061,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 182.88 25.4 0)
+			(at 179.07 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6618,7 +6648,7 @@
 		(pin "3"
 			(uuid "ba914d11-967b-4755-b03d-a0a1466838dd")
 		)
-		(pin "[2,11]"
+		(pin "14"
 			(uuid "2ed96ac9-c15c-45bd-80e5-9b007e067cb6")
 		)
 		(pin "8"
@@ -6626,6 +6656,12 @@
 		)
 		(pin "12"
 			(uuid "7ed972cd-c017-4a9a-8eed-acfd95b62fb8")
+		)
+		(pin "11"
+			(uuid "352f43fe-01bc-4134-bba1-8347b2ba7f1c")
+		)
+		(pin "[2,13]"
+			(uuid "c70f3414-9c6b-4afc-8b4d-e98377c80fc9")
 		)
 		(instances
 			(project "esp-bt-audio"
