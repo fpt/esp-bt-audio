@@ -50,5 +50,6 @@ docs/        design notes
 ## Status
 
 - **v0.1.0** (tag): first PCBs ordered (bare boards, hand assembly). Not yet tested.
-- **Next batch** (`main`): new pin assignment on i2s-power, assembled by JLCPCB (PCBA).
+- **Next batch** (`main`, ordered 2026-11-04): new pin assignment on i2s-power, both boards
+  assembled by JLCPCB (Economic PCBA).
 Firmware builds, not yet run on hardware.

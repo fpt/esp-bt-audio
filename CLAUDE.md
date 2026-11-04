@@ -61,8 +61,9 @@ K="/c/Program Files/KiCad/10.0/bin/kicad-cli.exe"
 
 ## Not verified on hardware yet
 
-Everything. v0.1.0 boards are ordered but not yet tested; the next batch on `main` changes
-the i2s-power pins and targets JLCPCB PCBA. When a pin changes, check it against the v0.1.0 board too:
+Everything. v0.1.0 boards (bare PCBs) are ordered but not yet tested. The next batch
+(ordered 2026-11-04, both boards, JLCPCB Economic PCBA, lead-free HASL) changes the
+i2s-power pins and C10/C11 to 220p. When a pin changes, check it against the v0.1.0 board too:
 firmware may need to support both revisions. Open questions: PT8211 L/R order
 (`CONFIG_BTR_SWAP_LR`), WS2812B-V6 colour order, battery ADC accuracy, LM4881 pop on
-amp enable.
+amp enable, JLCPCB placement rotation of the ICs.

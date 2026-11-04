@@ -3245,7 +3245,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "200p"
+		(property "Value" "220p"
 			(at 154.94 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6352,7 +6352,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "200p"
+		(property "Value" "220p"
 			(at 172.72 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
