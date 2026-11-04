@@ -552,7 +552,7 @@
       },
       {
         "netclass": "VDD",
-        "pattern": "VDD"
+        "pattern": "V*"
       }
     ]
   },
