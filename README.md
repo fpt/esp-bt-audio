@@ -49,4 +49,6 @@ docs/        design notes
 
 ## Status
 
-Boards designed, not yet fabricated. Firmware builds, not yet run on hardware.
+- **v0.1.0** (tag): first PCBs ordered (bare boards, hand assembly). Not yet tested.
+- **Next batch** (`main`): new pin assignment on i2s-power, assembled by JLCPCB (PCBA).
+Firmware builds, not yet run on hardware.
