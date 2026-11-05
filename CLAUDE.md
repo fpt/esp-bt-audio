@@ -33,6 +33,9 @@ K="/c/Program Files/KiCad/10.0/bin/kicad-cli.exe"
 - `MyLibrary:*` symbols/footprints live in the global library `../KiCad/MyLibrary.*`.
   Pin numbering of a symbol must match its footprint (the WS2812C-2020 symbol on a
   5050 footprint was wrong once).
+- Before a JLCPCB PCBA order run `bash .claude/skills/lcsc-check/check.sh` (LCSC package
+  vs footprint; caught C2128 SOD-323 on a SOD-123 footprint once). It reads the LCSC field
+  from the schematic, so sync it from the PCB first.
 - `.claude/skills/kicad` (kicad-happy) has deeper analyzers; ask before running them,
   they are external code.
 

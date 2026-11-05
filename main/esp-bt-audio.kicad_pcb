@@ -2650,7 +2650,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2128"
+		(property "LCSC" "C81598"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3136,7 +3136,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2128"
+		(property "LCSC" "C81598"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
