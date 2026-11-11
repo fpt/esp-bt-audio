@@ -68,11 +68,13 @@ K="/c/Program Files/KiCad/10.0/bin/kicad-cli.exe"
 
 ## Hardware status
 
-The v0.2.0 boards (JLCPCB Economic PCBA, ordered 2026-11-04) are in use. The PT8211 had
-to be re-soldered (check its CPL rotation before the next order). Since then BT pairing,
+The v0.2.0 boards (JLCPCB Economic PCBA, ordered 2026-11-04) are in use. The PT8211 is
+hand soldered (it once had a solder ball under pins 1-3, then was rotated; both fixed). Since then BT pairing,
 LED blue states, music from an iPhone and L/R order work (test with `CONFIG_BTR_TEST_TONE`:
-L 1 kHz, R 500 Hz). Open issue: a ~100 Hz buzz while Bluetooth runs, from the shared 3V3
-rail (PT8211 has no PSRR) and shared ground; see `docs/v0.3.0_plan.md`. The v0.1.0 bare
+L 1 kHz, R 500 Hz). Open issue: a ~100 Hz buzz while Bluetooth runs. It enters through the
+PT8211's own VDD/GND (no PSRR): it was there with the PT8211 on the rail but without I2S,
+and gone when the rotated chip was off the rail while the LM4881 still ran. See
+`docs/v0.3.0_plan.md`. The v0.1.0 bare
 PCBs (hand assembly) are untested; their GPIOs are the same, only the i2s-power header
 pin order differs. Open questions: WS2812B-V6 colour order, battery ADC accuracy, LM4881
 pop on amp enable.
