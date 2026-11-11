@@ -349,6 +349,11 @@ void bt_deinit(void)
 
 void bt_get_status(bt_status_t *out)
 {
+    /* The power and UI tasks start before bt_init(); nothing writes s_st yet. */
+    if (!s_lock) {
+        *out = s_st;
+        return;
+    }
     LOCK();
     *out = s_st;
     UNLOCK();

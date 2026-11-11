@@ -23,6 +23,7 @@
 #define POLL_MS        1000
 #define BAT_SAMPLES    16
 #define OFF_CONFIRM    5         /* consecutive low readings before powering off */
+#define NO_BAT_MV      2000      /* below this: no battery connected */
 
 static const char *TAG = "power";
 
@@ -52,7 +53,10 @@ static uint32_t read_battery_mv(void)
             n++;
         }
     }
-    return n ? (uint32_t)(sum / n) * 2 : 0;   /* 1/2 divider */
+    uint32_t mv = n ? (uint32_t)(sum / n) * 2 : 0;   /* 1/2 divider */
+    /* A LiPo never reads this low (the module's protection cuts at ~2.5 V): no
+     * battery, board fed from the Downloader. Report 0 so nothing powers off. */
+    return mv < NO_BAT_MV ? 0 : mv;
 }
 
 void power_off(void)
