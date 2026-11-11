@@ -62,15 +62,17 @@ K="/c/Program Files/KiCad/10.0/bin/kicad-cli.exe"
   (`I2S_STD_MSB_SLOT_DEFAULT_CONFIG`).
   It takes the right channel in the first slot (WS low), so `process()` in `audio.c`
   writes R first (verified on hardware). `slot_cfg.ws_pol` has no effect on the ESP32.
+- BR/EDR TX power is capped at -6 dBm in `bt_init` (slightly less buzz). Temporary;
+  remove once the hardware fix (v0.3.0) works.
 - Flash via the Downloader with the board off (the Downloader's 3V3 feeds the rail).
 
 ## Hardware status
 
-v0.1.0 boards (bare PCBs, hand assembled) run: BT pairing, LED blue states and the audio
-path work (checked with `CONFIG_BTR_TEST_TONE`: L 1 kHz, R 500 Hz). Music from an iPhone
-plays. A misplaced PT8211 gave only a buzz/whine; with the radio on, a broken analog
-path picks up ~100 Hz or >1 kHz noise from radio activity. The next batch (ordered 2026-11-04,
-both boards, JLCPCB Economic PCBA, lead-free HASL) changes the i2s-power pins and C10/C11 to
-220p. When a pin changes, check it against the v0.1.0 board too: firmware may need to
-support both revisions. Open questions: WS2812B-V6 colour order, battery ADC accuracy,
-LM4881 pop on amp enable, JLCPCB placement rotation of the ICs.
+The v0.2.0 boards (JLCPCB Economic PCBA, ordered 2026-11-04) are in use. The PT8211 had
+to be re-soldered (check its CPL rotation before the next order). Since then BT pairing,
+LED blue states, music from an iPhone and L/R order work (test with `CONFIG_BTR_TEST_TONE`:
+L 1 kHz, R 500 Hz). Open issue: a ~100 Hz buzz while Bluetooth runs, from the shared 3V3
+rail (PT8211 has no PSRR) and shared ground; see `docs/v0.3.0_plan.md`. The v0.1.0 bare
+PCBs (hand assembly) are untested; their GPIOs are the same, only the i2s-power header
+pin order differs. Open questions: WS2812B-V6 colour order, battery ADC accuracy, LM4881
+pop on amp enable.

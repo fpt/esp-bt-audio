@@ -299,6 +299,8 @@ esp_err_t bt_init(void)
     esp_bt_controller_config_t cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     ESP_RETURN_ON_ERROR(esp_bt_controller_init(&cfg), TAG, "controller init");
     ESP_RETURN_ON_ERROR(esp_bt_controller_enable(ESP_BT_MODE_CLASSIC_BT), TAG, "controller enable");
+    /* TX current bursts couple into the audio as a buzz; the phone is close. */
+    esp_bredr_tx_power_set(ESP_PWR_LVL_N12, ESP_PWR_LVL_N6);
     esp_bluedroid_config_t bcfg = BT_BLUEDROID_INIT_CONFIG_DEFAULT();
     bcfg.ssp_en = true;
     ESP_RETURN_ON_ERROR(esp_bluedroid_init_with_cfg(&bcfg), TAG, "bluedroid init");

@@ -49,7 +49,6 @@ docs/        design notes
 
 ## Status
 
-- **v0.1.0** (tag): first PCBs ordered (bare boards, hand assembly). Not yet tested.
-- **Next batch** (`main`, ordered 2026-11-04): new pin assignment on i2s-power, both boards
-  assembled by JLCPCB (Economic PCBA).
-Firmware builds, not yet run on hardware.
+- **v0.1.0** (tag): bare PCBs for hand assembly. Not tested.
+- **v0.2.0** (tag, `main`): both boards assembled by JLCPCB. Plays music from an iPhone;
+  buzzes while Bluetooth runs. Fixes planned in [docs/v0.3.0_plan.md](docs/v0.3.0_plan.md).
