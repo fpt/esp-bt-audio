@@ -7,6 +7,8 @@
  *
  * PT8211 is LSB-justified 16 bit. With 16-bit slots that is the same waveform as
  * MSB-justified, so the standard driver's MSB mode is used (BCK = 32 fs, no MCLK).
+ * It takes the right channel in the first slot (WS low), the reverse of I2S, so
+ * process() writes R first. (slot_cfg.ws_pol has no effect on the ESP32.)
  *
  * The amp turns on when a stream starts and off CONFIG_BTR_AMP_OFF_DELAY_MS after
  * it stops, so short pauses don't click.
@@ -36,6 +38,7 @@ static volatile bool s_streaming;
 static volatile int64_t s_stop_us;    /* when the stream stopped, 0 = amp should stay as is */
 static bool s_amp_on;
 static uint32_t s_dropped;
+static bool s_tone;          /* test tone owns the output; Bluetooth data is ignored */
 
 static void amp_set(bool on)
 {
@@ -64,12 +67,13 @@ static void process(int16_t *s, size_t samples)
             l = (l * (int32_t)g) >> 14;
             r = (r * (int32_t)g) >> 14;
         }
+        /* PT8211 order (R first) unless the board swaps the channels again. */
 #ifdef CONFIG_BTR_SWAP_LR
-        s[i] = (int16_t)r;
-        s[i + 1] = (int16_t)l;
-#else
         s[i] = (int16_t)l;
         s[i + 1] = (int16_t)r;
+#else
+        s[i] = (int16_t)r;
+        s[i + 1] = (int16_t)l;
 #endif
     }
 }
@@ -83,6 +87,32 @@ static void apply_rate(uint32_t hz)
     }
     i2s_channel_enable(s_tx);
     ESP_LOGI(TAG, "I2S %lu Hz", (unsigned long)hz);
+}
+
+/* Every 10 s while streaming: what reached I2S, to tell data problems from
+ * analog ones. */
+static uint32_t s_stat_bytes, s_stat_fed;
+static int s_stat_peak;
+static int64_t s_stat_t;
+
+static void stats(const int16_t *s, size_t samples)
+{
+    for (size_t i = 0; i < samples; i++) {
+        int v = s[i] < 0 ? -s[i] : s[i];
+        if (v > s_stat_peak) {
+            s_stat_peak = v;
+        }
+    }
+    s_stat_bytes += samples * 2;
+    int64_t now = esp_timer_get_time();
+    if (now - s_stat_t >= 10000000) {
+        ESP_LOGI(TAG, "10 s: in %lu B, out %lu B, dropped %lu, peak %d, gain %u/16384, first %04x %04x",
+                 (unsigned long)s_stat_fed, (unsigned long)s_stat_bytes, (unsigned long)s_dropped,
+                 s_stat_peak, s_gain_q14, (uint16_t)s[0], (uint16_t)s[1]);
+        s_stat_t = now;
+        s_stat_bytes = s_stat_fed = 0;
+        s_stat_peak = 0;
+    }
 }
 
 static void audio_task(void *arg)
@@ -116,6 +146,7 @@ static void audio_task(void *arg)
             continue;
         }
         process((int16_t *)chunk, len / 2);
+        stats((int16_t *)chunk, len / 2);
         size_t written;
         i2s_channel_write(s_tx, chunk, len, &written, portMAX_DELAY);
     }
@@ -173,6 +204,9 @@ void audio_set_volume(uint8_t vol)
 
 void audio_stream_event(bool started)
 {
+    if (s_tone) {
+        return;
+    }
     s_streaming = started;
     if (started) {
         s_stop_us = 0;
@@ -184,13 +218,43 @@ void audio_stream_event(bool started)
 
 void audio_feed(const uint8_t *buf, uint32_t len)
 {
+    if (s_tone) {
+        return;
+    }
     if (!s_streaming) {
         return;
     }
+    s_stat_fed += len;
     if (xRingbufferSend(s_rb, buf, len & ~3u, 0) != pdTRUE) {
         s_dropped += len;
     }
 }
+
+#if CONFIG_BTR_TEST_TONE
+#include <math.h>
+
+static void tone_task(void *arg)
+{
+    /* 441 frames = 10 ms at 44.1 kHz: whole cycles of 1 kHz and 500 Hz. */
+    static int16_t buf[441 * 2];
+    for (int i = 0; i < 441; i++) {
+        buf[2 * i]     = (int16_t)(8192 * sinf(2 * (float)M_PI * 1000 * i / 44100));
+        buf[2 * i + 1] = (int16_t)(8192 * sinf(2 * (float)M_PI * 500 * i / 44100));
+    }
+    for (;;) {
+        xRingbufferSend(s_rb, buf, sizeof(buf), portMAX_DELAY);
+    }
+}
+
+void audio_test_tone(void)
+{
+    ESP_LOGW(TAG, "test tone: L 1 kHz, R 500 Hz, -12 dBFS");
+    s_gain_q14 = 1 << 14;
+    audio_stream_event(true);
+    s_tone = true;
+    xTaskCreate(tone_task, "tone", 2048, NULL, 5, NULL);
+}
+#endif
 
 void audio_amp_off(void)
 {

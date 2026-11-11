@@ -45,6 +45,7 @@ void audio_set_volume(uint8_t vol);
 void audio_stream_event(bool started);
 void audio_feed(const uint8_t *buf, uint32_t len);  /* from the A2DP data callback */
 void audio_amp_off(void);
+void audio_test_tone(void);     /* CONFIG_BTR_TEST_TONE only */
 
 /* --- ui.c --- */
 esp_err_t ui_init(void);

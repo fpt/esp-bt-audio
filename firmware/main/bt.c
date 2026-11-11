@@ -170,6 +170,7 @@ static void a2d_cb(esp_a2d_cb_event_t event, esp_a2d_cb_param_t *param)
         s_st.audio_started = started;
         UNLOCK();
         audio_stream_event(started);
+        ESP_LOGI(TAG, "audio %s", started ? "started" : "stopped");
         break;
     }
     case ESP_A2D_AUDIO_CFG_EVT:
@@ -253,6 +254,7 @@ static void avrc_tg_cb(esp_avrc_tg_cb_event_t event, esp_avrc_tg_cb_param_t *par
         UNLOCK();
         audio_set_volume(vol);
         nvs_save_u8(NVS_KEY_VOL, vol);
+        ESP_LOGI(TAG, "volume %u/127", vol);
         break;
     }
 

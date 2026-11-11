@@ -60,13 +60,17 @@ K="/c/Program Files/KiCad/10.0/bin/kicad-cli.exe"
   block. I2S rate changes are applied in `audio_task`, not in the callback.
 - PT8211 is LSB-justified 16 bit; with 16-bit slots that equals MSB mode
   (`I2S_STD_MSB_SLOT_DEFAULT_CONFIG`).
+  It takes the right channel in the first slot (WS low), so `process()` in `audio.c`
+  writes R first (verified on hardware). `slot_cfg.ws_pol` has no effect on the ESP32.
 - Flash via the Downloader with the board off (the Downloader's 3V3 feeds the rail).
 
-## Not verified on hardware yet
+## Hardware status
 
-Everything. v0.1.0 boards (bare PCBs) are ordered but not yet tested. The next batch
-(ordered 2026-11-04, both boards, JLCPCB Economic PCBA, lead-free HASL) changes the
-i2s-power pins and C10/C11 to 220p. When a pin changes, check it against the v0.1.0 board too:
-firmware may need to support both revisions. Open questions: PT8211 L/R order
-(`CONFIG_BTR_SWAP_LR`), WS2812B-V6 colour order, battery ADC accuracy, LM4881 pop on
-amp enable, JLCPCB placement rotation of the ICs.
+v0.1.0 boards (bare PCBs, hand assembled) run: BT pairing, LED blue states and the audio
+path work (checked with `CONFIG_BTR_TEST_TONE`: L 1 kHz, R 500 Hz). Music from an iPhone
+plays. A misplaced PT8211 gave only a buzz/whine; with the radio on, a broken analog
+path picks up ~100 Hz or >1 kHz noise from radio activity. The next batch (ordered 2026-11-04,
+both boards, JLCPCB Economic PCBA, lead-free HASL) changes the i2s-power pins and C10/C11 to
+220p. When a pin changes, check it against the v0.1.0 board too: firmware may need to
+support both revisions. Open questions: WS2812B-V6 colour order, battery ADC accuracy,
+LM4881 pop on amp enable, JLCPCB placement rotation of the ICs.

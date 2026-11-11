@@ -57,6 +57,13 @@ menu "BT Audio Receiver"
 
     endmenu
 
+    config BTR_TEST_TONE
+        bool "Hardware test: play a test tone instead of Bluetooth audio"
+        default n
+        help
+            Checks PT8211 -> LM4881 -> jack. Left gets 1 kHz, right 500 Hz (tells
+            L/R apart). Bluetooth still runs and connects, but its audio is ignored.
+
     config BTR_SWAP_LR
         bool "Swap left/right channels"
         default n

@@ -23,6 +23,9 @@ void app_main(void)
     ESP_ERROR_CHECK(audio_init());
     ESP_ERROR_CHECK(power_init());
     ESP_ERROR_CHECK(ui_init());
+#if CONFIG_BTR_TEST_TONE
+    audio_test_tone();
+#endif
     ESP_ERROR_CHECK(bt_init());
     ESP_LOGI(TAG, "running, battery %lu mV", (unsigned long)power_battery_mv());
 }

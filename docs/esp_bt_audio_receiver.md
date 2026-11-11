@@ -236,10 +236,12 @@ ESP-IDF v5.4 のファームウェアを `firmware/` に置いている。ビル
 | 用途 | 実装 |
 |---|---|
 | A2DP sink / AVRCP | ESP-IDF Bluedroid（Classic BT のみ、BLE は無効） |
-| I2S 出力 | `driver/i2s_std.h`、MSB justified 16bit（16bit スロットなら PT8211 の LSB justified と同じ波形） |
+| I2S 出力 | `driver/i2s_std.h`、MSB justified 16bit（16bit スロットなら PT8211 の LSB justified と同じ波形）。PT8211 は WS Low のスロットを R として受けるので、R を先に送る（実機で確認） |
 | 音量 | AVRCP 絶対音量でサンプルをスケーリング |
 | LED | RMT で WS2812B を駆動 |
 | 電池電圧 | ADC1 oneshot ＋ キャリブレーション |
+
+`CONFIG_BTR_TEST_TONE` を有効にすると、Bluetooth の音声の代わりに L に 1kHz、R に 500Hz の正弦波を出す（Bluetooth は接続でき、音量も効く）。PT8211 → LM4881 → ジャックの確認用。
 
 ### 9.2 省電力
 
