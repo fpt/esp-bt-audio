@@ -38,6 +38,7 @@ static volatile bool s_streaming;
 static volatile int64_t s_stop_us;    /* when the stream stopped, 0 = amp should stay as is */
 static bool s_amp_on;
 static uint32_t s_dropped;
+static volatile uint32_t s_underruns; /* DMA buffers sent as zeros because no data was queued */
 static bool s_tone;          /* test tone owns the output; Bluetooth data is ignored */
 
 static void amp_set(bool on)
@@ -106,13 +107,21 @@ static void stats(const int16_t *s, size_t samples)
     s_stat_bytes += samples * 2;
     int64_t now = esp_timer_get_time();
     if (now - s_stat_t >= 10000000) {
-        ESP_LOGI(TAG, "10 s: in %lu B, out %lu B, dropped %lu, peak %d, gain %u/16384, first %04x %04x",
+        ESP_LOGI(TAG, "10 s: in %lu B, out %lu B, dropped %lu, underruns %lu, peak %d, gain %u/16384, first %04x %04x",
                  (unsigned long)s_stat_fed, (unsigned long)s_stat_bytes, (unsigned long)s_dropped,
-                 s_stat_peak, s_gain_q14, (uint16_t)s[0], (uint16_t)s[1]);
+                 (unsigned long)s_underruns, s_stat_peak, s_gain_q14, (uint16_t)s[0], (uint16_t)s[1]);
+        s_underruns = 0;
         s_stat_t = now;
         s_stat_bytes = s_stat_fed = 0;
         s_stat_peak = 0;
     }
+}
+
+/* TX "send queue overflow": the DMA reached a buffer nobody refilled. */
+static IRAM_ATTR bool on_underrun(i2s_chan_handle_t handle, i2s_event_data_t *event, void *ctx)
+{
+    s_underruns++;
+    return false;
 }
 
 static void audio_task(void *arg)
@@ -176,6 +185,8 @@ esp_err_t audio_init(void)
         },
     };
     ESP_RETURN_ON_ERROR(i2s_channel_init_std_mode(s_tx, &std), TAG, "i2s std");
+    i2s_event_callbacks_t cbs = { .on_send_q_ovf = on_underrun };
+    ESP_RETURN_ON_ERROR(i2s_channel_register_event_callback(s_tx, &cbs, NULL), TAG, "i2s cb");
     ESP_RETURN_ON_ERROR(i2s_channel_enable(s_tx), TAG, "i2s enable");
 
     s_rb = xRingbufferCreate(RINGBUF_SIZE, RINGBUF_TYPE_BYTEBUF);
@@ -210,6 +221,9 @@ void audio_stream_event(bool started)
     s_streaming = started;
     if (started) {
         s_stop_us = 0;
+        /* Count only what happens during playback; idle DMA sends zeros on purpose. */
+        s_underruns = 0;
+        s_stat_t = esp_timer_get_time();
     } else {
         s_stop_us = esp_timer_get_time();
         drain_ringbuf();
