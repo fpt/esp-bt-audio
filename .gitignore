@@ -29,9 +29,16 @@ fp-lib-table
 *.drl
 *.zip
 
+## JLCPCB plugins (Fabrication Toolkit, JLCPCB tools): generated output and part DB
+production/
+jlcpcb/
+
 ## Simulation
 *.raw
 
 ## OS
 .DS_Store
 Thumbs.db
+
+## Editor
+.vscode/

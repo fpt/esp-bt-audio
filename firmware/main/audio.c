@@ -1,14 +1,16 @@
 /*
- * Decoded A2DP PCM -> I2S -> PT8211, and the LM4881 SHUTDOWN line.
+ * Decoded A2DP PCM -> I2S -> DAC, and the LM4881 SHUTDOWN line.
  *
  * The A2DP sink data callback pushes PCM into a byte ring buffer without
  * blocking; audio_task applies the AVRCP volume and writes to I2S. The DMA
- * sends zeros (mid-scale on the PT8211) whenever the buffer runs dry.
+ * sends zeros (mid-scale) whenever the buffer runs dry.
  *
- * PT8211 is LSB-justified 16 bit. With 16-bit slots that is the same waveform as
- * MSB-justified, so the standard driver's MSB mode is used (BCK = 32 fs, no MCLK).
- * It takes the right channel in the first slot (WS low), the reverse of I2S, so
- * process() writes R first. (slot_cfg.ws_pol has no effect on the ESP32.)
+ * Both DACs get 16-bit slots (BCK = 32 fs) and no MCLK.
+ * - PT8211 is LSB-justified 16 bit. With 16-bit slots that is the same waveform as
+ *   MSB-justified, so the standard driver's MSB mode is used. It takes the right
+ *   channel in the first slot (WS low), the reverse of I2S, so process() writes R
+ *   first. (slot_cfg.ws_pol has no effect on the ESP32.)
+ * - A standard I2S DAC (UDA1334A, PCM5102A) gets Philips I2S, left first.
  *
  * The amp turns on when a stream starts and off CONFIG_BTR_AMP_OFF_DELAY_MS after
  * it stops, so short pauses don't click.
@@ -68,13 +70,13 @@ static void process(int16_t *s, size_t samples)
             l = (l * (int32_t)g) >> 14;
             r = (r * (int32_t)g) >> 14;
         }
-        /* PT8211 order (R first) unless the board swaps the channels again. */
-#ifdef CONFIG_BTR_SWAP_LR
-        s[i] = (int16_t)l;
-        s[i + 1] = (int16_t)r;
-#else
+        /* The DAC's slot order (see the top), unless the board swaps the channels. */
+#if defined(CONFIG_BTR_DAC_PT8211) != defined(CONFIG_BTR_SWAP_LR)
         s[i] = (int16_t)r;
         s[i + 1] = (int16_t)l;
+#else
+        s[i] = (int16_t)l;
+        s[i + 1] = (int16_t)r;
 #endif
     }
 }
@@ -175,7 +177,11 @@ esp_err_t audio_init(void)
     ESP_RETURN_ON_ERROR(i2s_new_channel(&chan, &s_tx, NULL), TAG, "i2s channel");
     i2s_std_config_t std = {
         .clk_cfg = I2S_STD_CLK_DEFAULT_CONFIG(44100),
+#if CONFIG_BTR_DAC_PT8211
         .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_STEREO),
+#else
+        .slot_cfg = I2S_STD_PHILIPS_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_STEREO),
+#endif
         .gpio_cfg = {
             .mclk = I2S_GPIO_UNUSED,
             .bclk = CONFIG_BTR_I2S_BCK_GPIO,

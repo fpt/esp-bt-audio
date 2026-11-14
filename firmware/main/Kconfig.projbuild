@@ -57,18 +57,32 @@ menu "BT Audio Receiver"
 
     endmenu
 
+    choice BTR_DAC
+        prompt "DAC"
+        default BTR_DAC_PT8211
+
+        config BTR_DAC_PT8211
+            bool "PT8211 (LSB-justified, right channel first)"
+
+        config BTR_DAC_I2S
+            bool "Standard I2S DAC (UDA1334A, PCM5102A)"
+            help
+                Philips I2S, 16-bit slots (BCK = 32 fs), left channel first, no MCLK.
+                Both DACs lock to the I2S clocks with their internal PLL.
+    endchoice
+
     config BTR_TEST_TONE
         bool "Hardware test: play a test tone instead of Bluetooth audio"
         default n
         help
-            Checks PT8211 -> LM4881 -> jack. Left gets 1 kHz, right 500 Hz (tells
+            Checks DAC -> LM4881 -> jack. Left gets 1 kHz, right 500 Hz (tells
             L/R apart). Bluetooth still runs and connects, but its audio is ignored.
 
     config BTR_SWAP_LR
         bool "Swap left/right channels"
         default n
         help
-            Set if the PT8211 plays left on the right ear.
+            Set if the DAC plays left on the right ear.
 
     config BTR_LED_BRIGHTNESS
         int "Status LED brightness"
