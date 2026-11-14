@@ -74,8 +74,9 @@ LED blue states, music from an iPhone and L/R order work (test with `CONFIG_BTR_
 L 1 kHz, R 500 Hz). Open issue: a ~100 Hz buzz while Bluetooth runs, plus
 distortion at low iPhone volume (PT8211). A controlled test (2026-11-14) showed the buzz
 enters through the LM4881 stage: a UDA1334A module on the same 3V3/I2S was clean into
-earphones directly and buzzed through the LM4881. v0.3.0 replaces both chips (I2S DAC +
-ground-referenced headphone amp); the firmware already supports `CONFIG_BTR_DAC_I2S`.
+earphones directly and buzzed through the LM4881. v0.3.0 replaces both chips with a
+TAD5142 (pin-controlled DAC + pseudo-differential headphone driver: 32-bit slots only, no
+EN pin, jack sleeve = OUT1M at 1.65 V, not GND); its firmware support is not done yet.
 See `docs/v0.2.0_conclusion.md` and `docs/v0.3.0_plan.md`. The v0.1.0 bare
 PCBs (hand assembly) are untested; their GPIOs are the same, only the i2s-power header
 pin order differs. Open questions: WS2812B-V6 colour order, battery ADC accuracy, LM4881
